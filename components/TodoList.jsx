@@ -43,7 +43,7 @@ const TodoList = () => {
         <h1 className='flex items-center justify-center gap-6 text-4xl  font-bold text-blue-300 mb-6'>Todo List <span className='ml-3'>{count}</span></h1>
          
          {/* todo input form */}
-         <form onSubmit={addTodo} className='w-[400px] mb-5'>
+         <form onSubmit={addTodo} className='w-[300px] mx-auto mb-5'>
           <div className="flex w-full max-w-sm items-center space-x-2">
             <Input 
             type="text" 
@@ -59,10 +59,10 @@ const TodoList = () => {
 
        
         {/* border */}
-         <div className='w-[400px] h-[2px] bg-blue-500 mb-10'></div>
+         <div className='w-[300px] h-[2px] bg-blue-500 mb-10'></div>
 
         {/* listItem */}
-        <ul className='flex flex-col gap-4'>
+        <ul className='flex flex-col gap-8'>
             {todos.map((todo)=> {
                 return (
                     <ListItem key={todo.id} todo={todo} removeTodo={removeTodo} finishTodo={finishTodo}/>

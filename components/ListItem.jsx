@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 
 const ListItem = ({todo, removeTodo, finishTodo}) => {
   return (
-       <li  className='min-w-[400px]   flex items-center justify-between gap-4'>
-          <p className='min-w-[320px] text-lg p-2 rounded-lg border border-blue-200'>{todo.text}</p>
+       <li  className='min-w-[300px] p-4 rounded-lg shadow-xl shadow-blue-200 border-2 border-blue-200   flex flex-col sm:flex-row items-center justify-between gap-4'>
+          <p className='min-w-[260px] text-lg p-2 rounded-lg border border-blue-200'>{todo.text}</p>
          <div className='flex gap-2'>
             {/* Delete Button */}
             <Button onClick={()=> removeTodo(todo.id)} variant='secondary' size='lg'>Delete</Button>
