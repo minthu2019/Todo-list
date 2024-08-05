@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import ListItem from './ListItem';
 
-const page = () => {
+const TodoList = () => {
   const [count, setCount] = useState(0)
   const [todos, setTodo] = useState([]);
   const [todoText, setTodoText] = useState("");
@@ -65,7 +65,7 @@ const page = () => {
         <ul className='flex flex-col gap-4'>
             {todos.map((todo)=> {
                 return (
-                    <ListItem todo={todo} removeTodo={removeTodo} finishTodo={finishTodo}/>
+                    <ListItem key={todo.id} todo={todo} removeTodo={removeTodo} finishTodo={finishTodo}/>
                 )
             })}
         </ul>
@@ -73,4 +73,4 @@ const page = () => {
   )
 }
 
-export default page
+export default TodoList
